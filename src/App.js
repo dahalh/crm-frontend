@@ -4,13 +4,15 @@ import "react-toastify/dist/ReactToastify.css";
 import { EntryPage } from "./pages/entry/EntryPage";
 import DefaultLayout from "./layout/DefaultLayout";
 import { Dashboard } from "./pages/dashboard/Dashboard";
+import { AddTicket } from "./pages/new-ticket/AddTicket";
 
 function App() {
   return (
     <div className="App">
       {/* <EntryPage /> */}
       <DefaultLayout>
-        <Dashboard />
+        {/* <Dashboard /> */}
+        <AddTicket />
       </DefaultLayout>
       <ToastContainer />
     </div>
