@@ -17,10 +17,13 @@ export const ResetPassword = ({ handleOnShow }) => {
     <Container>
       <Row>
         <Col>
-          <h2 className="text-info text-center">Client Login</h2>
+          <h2 className="text-info text-center">Reset Password</h2>
           <hr />
           <Form onSubmit={handleOnSubmit}>
             <Form.Group className="mb-3">
+              <Form.Text>
+                Please enter you email to reset your password.
+              </Form.Text>
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 onChange={handleOnChange}
