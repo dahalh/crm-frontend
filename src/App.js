@@ -5,6 +5,7 @@ import { EntryPage } from "./pages/entry/EntryPage";
 import DefaultLayout from "./layout/DefaultLayout";
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import { AddTicket } from "./pages/new-ticket/AddTicket";
+import { TicketLists } from "./pages/ticket-list/TicketLists";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <EntryPage /> */}
       <DefaultLayout>
         {/* <Dashboard /> */}
-        <AddTicket />
+        {/* <AddTicket /> */}
+        <TicketLists />
       </DefaultLayout>
       <ToastContainer />
     </div>
