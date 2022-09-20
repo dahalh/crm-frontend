@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { EntryPage } from "./pages/entry/EntryPage";
-import DefaultLayout from "./layout/DefaultLayout";
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import { AddTicket } from "./pages/new-ticket/AddTicket";
 import { TicketLists } from "./pages/ticket-list/TicketLists";
 import { Ticket } from "./pages/ticket/Ticket";
+import { PrivateRoute } from "./components/private-route/PrivateRoute";
 
 const App = () => {
   return (
@@ -19,33 +19,33 @@ const App = () => {
           <Route
             path="/dashboard"
             element={
-              <DefaultLayout>
+              <PrivateRoute>
                 <Dashboard />
-              </DefaultLayout>
+              </PrivateRoute>
             }
           />
           <Route
             path="/add-ticket"
             element={
-              <DefaultLayout>
+              <PrivateRoute>
                 <AddTicket />
-              </DefaultLayout>
+              </PrivateRoute>
             }
           />
           <Route
             path="/tickets"
             element={
-              <DefaultLayout>
+              <PrivateRoute>
                 <TicketLists />
-              </DefaultLayout>
+              </PrivateRoute>
             }
           />
           <Route
             path="/ticket/:tid"
             element={
-              <DefaultLayout>
+              <PrivateRoute>
                 <Ticket />
-              </DefaultLayout>
+              </PrivateRoute>
             }
           />
           {/* </DefaultLayout> */}
