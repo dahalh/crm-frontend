@@ -8,6 +8,7 @@ export const PrivateRoute = ({ children, ...rest }) => {
   return isAuth ? (
     <DefaultLayout>{children}</DefaultLayout>
   ) : (
+    // <Navigate {...rest} to="/" replace state={{ from: location }} />
     <Navigate to="/" replace state={{ from: location }} />
   );
 };
